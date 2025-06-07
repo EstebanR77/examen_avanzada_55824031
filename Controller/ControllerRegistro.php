@@ -15,18 +15,15 @@ class ControllerRegistro
 
      public function registar($request)
     {
-        try {
-            $category = new registro();
-            $category->set('name', $request['nameInput']);
-
-            if ($category->save()) {
-                return "registro correctamente echo.";
-            } else {
-                return "Error al registrar .";
-            }
-        } catch (\Exception $e) {
-            return "Error al registrar : " . $e->getMessage();
-        }
+        
+    {
+        $regitro = new Dishe();
+        $regitro ->set('nombre', $request['idInput']);
+        $regitro ->set('description', $request['descriptionInput']);
+        $regitro >set('price', $request['priceInput']);
+    
+        
     }
+
 
 }
